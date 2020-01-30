@@ -1,0 +1,17 @@
+import string
+
+total = "XLI UYMGO FVSAR JSB NYQTW SZIV XLI PEDC HSK SJ GEIWEV ERH CSYV YRMUYI WSPYXMSR MW QGRJLRSKRKVS"
+result = " "
+
+for k in range(1,26):
+	for i in total:
+		if i not in string.ascii_uppercase:
+			result += " "
+		else:
+			alp = ord(i)+k
+			if alp > ord("Z"):
+				result += chr(alp - 26)
+			else:
+				result += chr(alp)
+	print("plus"+ str(k) +" : " + result)
+	result = " "
